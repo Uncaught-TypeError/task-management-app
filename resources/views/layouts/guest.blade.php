@@ -19,7 +19,7 @@
             <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
                 <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                     <a href="#" class="flex items-center">
-                        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">White & Yellow</span>
+                        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">TaskBoss</span>
                     </a>
                     <div class="flex items-center lg:order-2">
 
@@ -53,23 +53,14 @@
                                 <a href="/" class="block py-2 pl-3 pr-4 text-black rounded lg:bg-transparent lg:p-0 border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 dark:text-gray-400 lg:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Home</a>
                             </li>
                             <li>
-                                <a href="#" class="block py-2 pl-3 pr-4 text-black border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400 lg:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About Us</a>
+                                <a href="#" class="block py-2 pl-3 pr-4 text-black border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400 lg:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Tasks</a>
                             </li>
                             <li>
-                                <a href="" class="block py-2 pl-3 pr-4 text-black border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400 lg:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Make Reservation</a>
+                                <a href="" class="block py-2 pl-3 pr-4 text-black border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400 lg:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
                             </li>
                             <li>
-                                <a href="" class="block py-2 pl-3 pr-4 text-black border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400 lg:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Our Menu</a>
+                                <a href="" class="block py-2 pl-3 pr-4 text-black border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400 lg:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Ask Help</a>
                             </li>
-                            <li>
-                                <a href="" class="block py-2 pl-3 pr-4 text-black border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-400 lg:p-0 dark:text-gray-400 lg:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Category</a>
-                            </li>
-                            {{-- <li>
-                                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Team</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                            </li> --}}
                         </ul>
                     </div>
                 </div>
@@ -167,7 +158,7 @@
                 <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
                 <div class="text-center">
                     <a href="#" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
-                        White & Yellow
+                        TaskBoss
                     </a>
                     <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2021-2022 WhiteandYellow™. All Rights Reserved. Built with <a href="https://flowbite.com" class="text-red-600 hover:underline dark:text-red-500">Laravel</a> and <a href="https://tailwindcss.com" class="text-blue-600 hover:underline dark:text-blue-500">Tailwind CSS</a>. Created by <a href="https://themewagon.com/" class="text-yellow-600 hover:underline dark:text-yellow-500">N.Dev</a>
                     </span>
