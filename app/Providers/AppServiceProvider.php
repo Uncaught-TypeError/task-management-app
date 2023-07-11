@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Session\SessionManager;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use App\View\Components\Guest2Layout;
+
 
 class AppServiceProvider extends ServiceProvider
 {

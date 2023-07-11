@@ -25,11 +25,13 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Gate::define('create-task', function ($user) {
-            // Retrieve the user's roles and check if any of them have the "create task" permission
-            return $user->roles->contains(function ($role) {
-                return $role->permissions->contains('name', 'create-task');
-            });
-        });
+        // Gate::define('create-task', function ($user) {
+        //     // Dump user's roles and permissions
+        //     dd($user->roles, $user->roles->flatMap->permissions);
+        
+        //     return $user->roles->contains(function ($role) {
+        //         return $role->permissions->contains('name', 'Create Task');
+        //     });
+        // });
     }
 }
