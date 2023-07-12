@@ -4,6 +4,9 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\FrontendAnalysisController;
+use App\Http\Controllers\FrontendTaskController;
+use App\Http\Controllers\FrontendTeamController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TaskController;
 use App\Models\Task;
@@ -45,7 +48,12 @@ Route::post('/task/assign', [TaskController::class, 'assign'])->name('assign.use
 Route::get('/task/take', [TaskController::class, 'takeTask'])->name('task.take');
 Route::post('/task/take', [TaskController::class, 'take'])->name('take.user');
 
+Route::get('/task/submit/{user_id}', [TaskController::class, 'submitTask'])->name('task.submit');
+Route::post('/task/submit', [TaskController::class, 'submitStore'])->name('task.submit.store');
 
+Route::get('/front/task', [FrontendTaskController::class, 'index'])->name('front.task.index');
+Route::get('/front/team', [FrontendTeamController::class, 'index'])->name('front.team.index');
+Route::get('/front/analysis', [FrontendAnalysisController::class, 'index'])->name('front.analysis.index');
 
 // Route::resource('task', TaskController::class)->except([
 //     'index', 'create', 'store', 'destroy'

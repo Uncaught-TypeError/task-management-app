@@ -13,9 +13,10 @@ class TaskController extends Controller
 {
     public function index(){
         $tasks = ModelsTask::all();
+        $users = User::all();
         // $taskusers = ModelsTask::with('users')->get();
         // dd(session()->all());
-        return view('task.index', compact('tasks'));
+        return view('task.index', compact('tasks', 'users'));
     }
 
     public function create(){
@@ -113,5 +114,30 @@ class TaskController extends Controller
 
         return redirect()->route('task.index')->with('message', 'Task assigned successfully.');
     }
+
+    public function submitTask($user_id){
+        $tasks = ModelsTask::where('user_id', $user_id)->get();
+        return view('task.submit.index', compact('tasks'));
+    }
+
+    public function submitStore(Request $request)
+    {
+        // dd($request);
+        $validated = $request->validate([
+            'task_ids' => 'required|array',
+            'task_ids.*' => 'exists:tasks,id',
+        ]);
+
+        // Process the submitted task IDs
+        foreach ($validated['task_ids'] as $taskId) {
+            // Update the task completion status
+            $task = ModelsTask::findOrFail($taskId);
+            $task->completion = 1; // Set completion to true
+            $task->save();
+        }
+
+        return redirect()->route('task.index')->with('message', 'Tasks submitted successfully.');
+    }
+
 
 }
