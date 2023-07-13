@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\FrontendAnalysisController;
+use App\Http\Controllers\FrontendContactController;
 use App\Http\Controllers\FrontendTaskController;
 use App\Http\Controllers\FrontendTeamController;
 use App\Http\Controllers\ProfileController;
@@ -54,6 +55,7 @@ Route::post('/task/submit', [TaskController::class, 'submitStore'])->name('task.
 Route::get('/front/task', [FrontendTaskController::class, 'index'])->name('front.task.index');
 Route::get('/front/team', [FrontendTeamController::class, 'index'])->name('front.team.index');
 Route::get('/front/analysis', [FrontendAnalysisController::class, 'index'])->name('front.analysis.index');
+Route::get('/front/contact', [FrontendContactController::class, 'index'])->name('front.contact.index');
 
 // Route::resource('task', TaskController::class)->except([
 //     'index', 'create', 'store', 'destroy'

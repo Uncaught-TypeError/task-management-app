@@ -5,6 +5,14 @@
                 <div class="p-6 flex justify-center items-center">
                     <span class="text-2xl font-bold">Data Analysis</span>
                 </div>
+                <div class="flex justify-around my-2 items-center">
+                    <div class="border p-4">
+                        <span class="text-xl font-bold">Roles & Permissions Analysis BarChart</span>
+                    </div>
+                    <div class="border p-4">
+                        <span class="text-xl font-bold">User & Roles Analysis PieChart</span>
+                    </div>
+                </div>
                 <div class="flex justify-center">
                     <div class="grid grid-cols-2 gap-8">
                         <div class="border p-4 flex justify-center items-center w-auto">
@@ -55,8 +63,25 @@
                 @endphp
                 <div class="flex justify-center mt-8">
                     <span class="border border-gray-200 w-[30rem] p-5 flex justify-center items-center text-2xl font-bold">
-                        Total Time Spent: {{ $totalTime->format('%H : %I ') }}
+                        Total Session Time: {{ $totalTime->format('%H : %I ') }}
                     </span>
+                </div>
+                <div class="flex justify-center my-5 items-center">
+                    <div class="border p-4">
+                        <span class="text-xl font-bold">Tasks Completion</span>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-8">
+                    <div class="w-[450px] h-auto m-auto">
+                        @php
+                            $chartLabels3 = json_encode(['Completed', 'Remaining']);
+                            $chartData3 = json_encode([
+                                $tasks->where('completion', true)->count(),
+                                $tasks->where('completion', false)->count(),
+                            ]);
+                        @endphp
+                        <canvas id="myChart3"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,5 +147,32 @@
             document.getElementById('myChart2'),
             config2
         );
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const chartLabels3 = JSON.parse('{!! $chartLabels3 !!}');
+        const chartData3 = JSON.parse('{!! $chartData3 !!}');
+
+        const data3 = {
+            labels: chartLabels3,
+            datasets: [{
+                label: 'Roles',
+                data: chartData3,
+                backgroundColor: ['rgb(122, 255, 147)', 'lightpink'],
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1,
+            }]
+        };
+
+        const config3 = {
+            type: 'pie',
+            data: data3,
+            options: {}
+        };
+
+        new Chart(
+            document.getElementById('myChart3'),
+            config3
+        );
+    });
     </script>
 </x-guest-layout>
