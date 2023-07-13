@@ -8,6 +8,7 @@ use App\Http\Controllers\FrontendAnalysisController;
 use App\Http\Controllers\FrontendContactController;
 use App\Http\Controllers\FrontendTaskController;
 use App\Http\Controllers\FrontendTeamController;
+use App\Http\Controllers\Invite\InvitationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TaskController;
 use App\Models\Task;
@@ -54,8 +55,12 @@ Route::post('/task/submit', [TaskController::class, 'submitStore'])->name('task.
 
 Route::get('/front/task', [FrontendTaskController::class, 'index'])->name('front.task.index');
 Route::get('/front/team', [FrontendTeamController::class, 'index'])->name('front.team.index');
+Route::get('/front/pairs', [FrontendTeamController::class, 'pairs'])->name('front.team.pairs');
 Route::get('/front/analysis', [FrontendAnalysisController::class, 'index'])->name('front.analysis.index');
 Route::get('/front/contact', [FrontendContactController::class, 'index'])->name('front.contact.index');
+
+Route::get('/invi/{user}', [InvitationController::class, 'index'])->name('team.invi');
+Route::post('/invi/send', [InvitationController::class, 'sendInvitation'])->name('invitations.send')->middleware('web');
 
 // Route::resource('task', TaskController::class)->except([
 //     'index', 'create', 'store', 'destroy'

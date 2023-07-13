@@ -61,6 +61,9 @@
                                 <a href="{{ route('front.team.index') }}" class="block py-2 pl-3 pr-4 text-gray-700 rounded lg:bg-transparent lg:p-0 border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-500">Team</a>
                             </li>
                             <li>
+                                <a href="{{ route('front.team.pairs') }}" class="block py-2 pl-3 pr-4 text-gray-700 rounded lg:bg-transparent lg:p-0 border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-500">Pairs</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('front.analysis.index') }}" class="block py-2 pl-3 pr-4 text-gray-700 rounded lg:bg-transparent lg:p-0 border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-500">Analysis</a>
                             </li>
                         </ul>

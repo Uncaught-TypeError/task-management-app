@@ -128,11 +128,9 @@ class TaskController extends Controller
             'task_ids.*' => 'exists:tasks,id',
         ]);
 
-        // Process the submitted task IDs
         foreach ($validated['task_ids'] as $taskId) {
-            // Update the task completion status
             $task = ModelsTask::findOrFail($taskId);
-            $task->completion = 1; // Set completion to true
+            $task->completion = 1;
             $task->save();
         }
 
