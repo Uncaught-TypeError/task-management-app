@@ -24,25 +24,25 @@ class FrontendTeamController extends Controller
         $invitation = Invitation::all();
         $users = User::all();
 
-        $senderName = "";
-        $recipientName = "";
+        // $senderName = "";
+        // $recipientName = "";
 
-        foreach ($invitation as $invite) {
-            foreach ($users as $user) {
-                if ($invite->sender_id == $user->id) {
-                    $senderName = $user->name;
-                }
-                if ($invite->receipient_id == $user->id) {
-                    $recipientName = $user->name;
-                }
-            }
-        }
+        // foreach ($invitation as $invite) {
+        //     foreach ($users as $user) {
+        //         if ($invite->sender_id == $user->id) {
+        //             $senderName = $user->name;
+        //         }
+        //         if ($invite->receipient_id == $user->id) {
+        //             $recipientName = $user->name;
+        //         }
+        //     }
+        // }
 
         // Random Two Word
         $words = ['Big', 'Bones', 'Awesome', 'Frog', 'Fantastic', 'Amazing', 'Poop'];
         $randomWords = array_rand($words, 2);
         $text = $words[$randomWords[0]] . ' ' . $words[$randomWords[1]];
 
-        return view('frontend.team.pair', compact('senderName', 'recipientName', 'text'));
+        return view('frontend.team.pair', compact('invitation', 'users', 'text'));
     }
 }

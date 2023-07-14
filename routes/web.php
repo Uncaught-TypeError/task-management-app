@@ -9,6 +9,7 @@ use App\Http\Controllers\FrontendContactController;
 use App\Http\Controllers\FrontendTaskController;
 use App\Http\Controllers\FrontendTeamController;
 use App\Http\Controllers\Invite\InvitationController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TaskController;
 use App\Models\Task;
@@ -61,6 +62,10 @@ Route::get('/front/contact', [FrontendContactController::class, 'index'])->name(
 
 Route::get('/invi/{user}', [InvitationController::class, 'index'])->name('team.invi');
 Route::post('/invi/send', [InvitationController::class, 'sendInvitation'])->name('invitations.send')->middleware('web');
+
+Route::get('/message', [MessageController::class, 'index'])->name('front.message');
+Route::post('/invitation/accept/{invitation}', [MessageController::class, 'accept'])->name('invitation.accept');
+Route::post('/invitation/reject/{invitation}', [MessageController::class, 'reject'])->name('invitation.reject');
 
 // Route::resource('task', TaskController::class)->except([
 //     'index', 'create', 'store', 'destroy'

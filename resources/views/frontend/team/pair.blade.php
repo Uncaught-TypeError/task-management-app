@@ -6,19 +6,35 @@
                 <p class="mx-auto text-base leading-relaxed lg:w-2/3">Teams that are working on projects together, each with specific team names</p>
             </div>
             <div class="-m-2 flex flex-wrap">
-                <div class="w-full p-2 md:w-1/2 lg:w-1/3">
-                    <div class="flex h-full items-center rounded-lg border border-gray-200 p-4">
-                        <img alt="team" class="h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center" src="https://dummyimage.com/80x80" />
-                        <div class="flex-grow ml-4">
-                            <h2 class="title-font font-medium text-gray-900">{{ $text }}</h2>
-                            <div class="flex flex-row items-center gap-1">
-                                <p class="text-gray-500">{{ $senderName }}</p>
-                                <p class="text-gray-500">|</p>
-                                <p class="text-gray-500">{{ $recipientName }}</p>
+                @foreach ($invitation as $invite)
+                    @php
+                        $senderName = null;
+                        $recipientName = null;
+                    @endphp
+                    @foreach ($users as $user)
+                        @if ($invite->sender_id == $user->id)
+                            @php $senderName = $user->name; @endphp
+                        @endif
+                        @if ($invite->receipient_id == $user->id && $invite->status != 'pending')
+                            @php $recipientName = $user->name; @endphp
+                        @endif
+                    @endforeach
+                    @if (!is_null($senderName) && !is_null($recipientName))
+                        <div class="w-full p-2 md:w-1/2 lg:w-1/3">
+                            <div class="flex h-full items-center rounded-lg border border-gray-200 p-4">
+                                <img alt="team" class="h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center" src="https://dummyimage.com/80x80" />
+                                <div class="flex-grow ml-4">
+                                    <h2 class="title-font font-medium text-gray-900">{{ $text }}</h2>
+                                    <div class="flex flex-row items-center gap-1">
+                                        <p class="text-gray-500">{{ $senderName }}</p>
+                                        <p class="text-gray-500">|</p>
+                                        <p class="text-gray-500">{{ $recipientName }}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
