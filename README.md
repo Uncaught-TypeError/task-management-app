@@ -1,7 +1,6 @@
 # A Task Management App (A full-stack Project)
 
 User can create, edit, assign, submit tasks, teamup, etc so on. Almost everything you can do on a task management app. (Too lazy to write proper description as i have projects in hand).
-But i have to say, the biggest & complicated project i have created so far.
 
 ## Insight Images
 
