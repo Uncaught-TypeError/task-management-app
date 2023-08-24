@@ -5,12 +5,19 @@ But i have to say, the biggest & complicated project i have created so far.
 
 ## Insight Images
 
+### Home Page
+
 ![127 0 0 1_8000_](https://github.com/Uncaught-TypeError/task-management-app/assets/95492327/e952292e-ceee-4ca4-9673-9c420efd5506)
+
+### User Page
+
+![127 0 0 1_8000_front_team](https://github.com/Uncaught-TypeError/task-management-app/assets/95492327/eb24bf7f-4dd7-4ca6-8514-23e4e02aef2e)
+![127 0 0 1_8000_front_task](https://github.com/Uncaught-TypeError/task-management-app/assets/95492327/423c6beb-ff9c-4af4-9662-1c3ceba0899e)
+
+### Admin Dashboard
 ![127 0 0 1_8000_admin_roles](https://github.com/Uncaught-TypeError/task-management-app/assets/95492327/8712f063-6a61-45bb-9def-aadc7d334aff)
 ![127 0 0 1_8000_task](https://github.com/Uncaught-TypeError/task-management-app/assets/95492327/6b123044-0b90-44d6-9fb8-a7542265149c)
 ![127 0 0 1_8000_front_analysis](https://github.com/Uncaught-TypeError/task-management-app/assets/95492327/ba253fbb-6240-4c6a-b09f-fac85309aa49)
-![127 0 0 1_8000_front_team](https://github.com/Uncaught-TypeError/task-management-app/assets/95492327/eb24bf7f-4dd7-4ca6-8514-23e4e02aef2e)
-![127 0 0 1_8000_front_task](https://github.com/Uncaught-TypeError/task-management-app/assets/95492327/423c6beb-ff9c-4af4-9662-1c3ceba0899e)
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
