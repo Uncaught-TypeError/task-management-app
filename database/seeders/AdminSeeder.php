@@ -21,5 +21,20 @@ class AdminSeeder extends Seeder
         ]);
 
         $user->assignRole('supervisor', 'admin');
+
+        // Give admin-specific permissions
+        // $adminPermissions = [
+        //     'Create Task',
+        //     'Edit Task',
+        //     'Delete Task',
+        //     'Submit Task',
+        //     'Give Feedback',
+        //     'Team Up',
+        //     'Assign Task',
+        // ];
+
+        // Attach admin permissions to the admin role
+        // $adminRole = $user->roles->where('name', 'admin')->first();
+        // $adminRole->givePermissionTo($adminPermissions);
     }
 }
