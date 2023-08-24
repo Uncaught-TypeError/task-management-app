@@ -97,6 +97,9 @@ Compile and watch for frontend changes:
 
 `npm run dev`
 
+## Make sure to create multiple users (Optional)
+Register multiple users and give respective roles and test the web-app for better experience and unlock hidden permission-based functions.
+
 
 ## Additional Steps
 
